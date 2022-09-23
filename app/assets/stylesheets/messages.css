@@ -1,14 +1,20 @@
-.wrapper {
+/*****************************************
+  メイン
+*****************************************/
+.wrapper {/*全体の配列（index）*/
   display: flex;
 }
+/*****************************************
+  サイドバー
+*****************************************/
 
-.side-main {
+.side-main {/*サイドバーの親要素*/
   width: 300px;
   height: 100vh;
   background-color: #253141
 }
 
-.side-top {
+.side-top {/*左上のロゴ*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,13 +23,13 @@
   background-color: #253141;
 }
 
-.logo a {
+.logo a {/*ロゴ名装飾*/
   font-size: 16px;
   text-decoration: none;
   color: #fafafa;
 }
 
-.chat-create a {
+.chat-create a {/*チャットルーム作成の装飾*/
   border: 1px solid lightblue;
   padding: 14px;
   font-size: 10px;
@@ -31,59 +37,128 @@
   text-decoration: none;
 }
 
-.rooms {
+.rooms {/*サイドバーのチャットルーム表示場所*/
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 0 20px;
   overflow: scroll;
 }
 
-.chat-room {
+.chat-room {/*チャットルームの装飾*/
   padding: 20px 20px 40px;
 }
 
-.chat-room a {
+.chat-room a {/*チャットルームの文字装飾*/
   text-decoration: none;
   color: white;
 }
+/*****************************************
+  チャットメイン表示場所
+*****************************************/
 
-.chat-main {
+.chat-main {/*チャット表示の親要素*/
   width: calc(100Vw - 300px);
   background-color: #ffffff;
 }
 
-.chat-top {
+.chat-top {/*チャットヘッダー*/
   display: flex;
   justify-content: space-between;
   height: 100px;
   padding: 0 40px;
 }
 
-.chat-name {
+.chat-name {/*チャットヘッダー・表示部屋名装飾*/
   margin-top: 36px;
   font-size: 24px;
   color: #333;
 }
 
-.chat-end {
+.chat-end {/*チャット終了の装飾*/
   margin-top: 40px;
 }
 
-.chat-end a {
+.chat-end a {/*チャット終了の文字装飾*/
   text-decoration: none;
   border: 1px solid darkred;
   color: darkred;
   padding: 20px;
 }
 
-.messages {
+.messages {/*チャット詳細表示（中央）の親要素*/
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   background-color: #fafafa;
+  overflow: scroll;
 }
 
-.chat-bottom {
+.box {/*メッセージ一覧表示内*/
+  margin: 10px 0 0 0;
+/**  border: 1px solid red;/**配置確認用**/
+}
+
+.box-flex {/*横並び用(.user-name・.time)*/
+  display: flex;
+/*  margin-bottom: 10px; */
+}
+
+.user-name {/*投稿者*/
+  padding-right: 10px;
+  font-size: 16px;
+  color: #434a54;
+}
+
+.time {/*投稿日*/
+  font-size: 12px;
+  color: #999;
+}
+
+.message {/*コメント内容*/
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #434a54;
+}
+
+.chat-bottom {/*チャットフッター*/
   height: 90px;
   padding: 20px 40px;
   background-color: #dddddd;
+  display: flex;
+}
+
+.message-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.message-form {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.chat-submit {
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #38aef0;
+  font-size: 16px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
