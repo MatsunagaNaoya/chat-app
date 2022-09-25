@@ -4,13 +4,15 @@
       <!-- リンク先は.今ログインしてるユーザー名を表示,Prefix_path(リンク名)にログインしてるユーザー名を取り出す-->
     </div>
     <div class="chat-create">
-      <a href="#">チャットを作成する</a>
+      <%= link_to "チャットを作成する", new_room_path %>
     </div>
   </div>
     <div class="rooms">
-      <div class="chat-room">
-        <a href="#">techroom1</a>
-      </div>
+      <% current_user.rooms.each do |room| %>
+        <div class="chat-room">
+          <a href="#"><%= room.name %></a>
+        </div>
+      <% end %>
       <div class="chat-room">
         <a href="#">techroom2</a>
       </div>
