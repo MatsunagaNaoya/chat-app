@@ -1,6 +1,7 @@
   <div class="side-top">
-    <div class="logo">
-      <a href="#">Tom</a>
+    <div class="user">
+      <%= link_to current_user.name, edit_user_path(current_user) %>
+      <!-- リンク先は.今ログインしてるユーザー名を表示,Prefix_path(リンク名)にログインしてるユーザー名を取り出す-->
     </div>
     <div class="chat-create">
       <a href="#">チャットを作成する</a>

@@ -14,7 +14,7 @@
   background-color: #253141
 }
 
-.side-top {/*左上のロゴ*/
+.side-top {/*左上表示のユーザー名部分*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@
   background-color: #253141;
 }
 
-.logo a {/*ロゴ名装飾*/
+.user a {/*ユーザー名装飾*/
   font-size: 16px;
   text-decoration: none;
   color: #fafafa;
