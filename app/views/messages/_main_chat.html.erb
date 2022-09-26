@@ -9,33 +9,7 @@
     </div>
 <!-- メッセージ一覧 -->
     <div class="messages">
-      メッセージ一覧表示
-      <div class="box">
-        <div class="box-flex">
-          <div class="user-name">
-            松
-          </div>
-          <div class="time">
-            2020/3/31(Wed) 12:43:30
-          </div>
-        </div>
-        <div class="message">
-          おはよう
-        </div>
-      </div>
-      <div class="box">
-        <div class="box-flex">
-          <div class="user-name">
-            竹
-          </div>
-          <div class="time">
-            2020/3/31(Wed) 12:43:30
-          </div>
-        </div>
-        <div class="message">
-          おはよう
-        </div>
-      </div>
+      <%= render partial: "message", collection: @messages %>
     </div>
 <!-- チャットフッター -->
     <%= form_with model: [@room, @message], class: 'chat-bottom', local: true do |f| %>

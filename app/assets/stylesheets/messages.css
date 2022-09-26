@@ -113,7 +113,7 @@
   color: #999;
 }
 
-.message {/*コメント内容*/
+.message-content {/*コメント内容*/
   margin: 10px 0 40px;
   font-size: 14px;
   color: #434a54;
